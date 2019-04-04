@@ -36,7 +36,7 @@ Open a graph in edit mode by click the title > Edit (or by pressing `e` key whil
 
 | Name               | Description                                                                                                                                                                                                                                                                                                                         |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _Query expression_ | Prometheus query expression, check out the [Prometheus documentation](http://prometheus.io/docs/querying/basics/).                                                                                                                                                                                                                  |
+| _Query expression_ | Prometheus query expression.                                                                                                                                                                                                                  |
 | _Legend format_    | Controls the name of the time series, using name or pattern. For example `{{hostname}}` will be replaced with label value for the label `hostname`.                                                                                                                                                                                 |
 | _Min step_         | Set a lower limit for the Prometheus step option. Step controls how big the jumps are when the Prometheus query engine performs range queries. Sadly there is no official prometheus documentation to link to for this very important option.                                                                                       |
 | _Resolution_       | Controls the step option. Small steps create high-resolution graphs but can be slow over larger time ranges, lowering the resolution can speed things up. `1/2` will try to set step option to generate 1 data point for every other pixel. A value of `1/10` will try to set step option so there is a data point every 10 pixels. |
@@ -273,14 +273,6 @@ The time range tab allows you to override the dashboard time range and specify a
 Either through a relative from now time option or through a timeshift.
 
 # Prometheus
-
-## Architecture
-
-This diagram illustrates the architecture of Prometheus and some of its ecosystem components
-
-![](https://prometheus.io/assets/architecture.png)
-
-# QUERY EXAMPLES
 
 Return all time series with the metric `http_requests_total`:
 
